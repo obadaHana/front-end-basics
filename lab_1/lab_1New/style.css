@@ -1,0 +1,69 @@
+body{
+
+    display: grid;
+}
+header{
+    display: flex;
+    
+}
+.headerTitle{
+    justify-content: left;
+    padding: 10px;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+}
+header nav ul {
+    background-color: rgb(137, 3, 3);
+    justify-content: right;
+
+}
+
+.book{
+
+    display: grid;
+
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(137, 3, 3);
+    padding: 10px;
+    border: 1px rgb(137, 3, 3);
+
+}
+main aside{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+@media(max-width: 1024px){
+    header{}
+    main{}
+    main aside{
+       .catag{
+        display: flex;
+        flex-direction: row;
+        gap: 15px 
+
+       }
+    }
+
+    .catag ul li {
+        text-decoration: none;
+    }
+
+
+
+
+    .books{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

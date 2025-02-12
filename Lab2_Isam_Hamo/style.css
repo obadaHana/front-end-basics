@@ -1,0 +1,136 @@
+/* Reset and box-sizing rules */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar .menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar .menu li {
+    padding: 0 10px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu a:hover {
+    color: #4fbfa8;
+}
+
+/* Main lab2 content styles */
+.lab2 {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Main content styling */
+main {
+    padding: 20px 0;
+}
+
+/* Individual post styles */
+.post {
+    border: 1px solid #000;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.post h2 {
+    margin: 0 0 10px 0;
+    color: #000;
+    font-size: 1.5em;
+}
+
+.post .post-id {
+    font-weight: bold;
+    float: right;
+}
+
+.post p {
+    margin: 0 0 10px 0;
+    color: #000;
+}
+
+.post::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Form and input styles */
+form label,
+form input,
+form textarea,
+form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4fbfa8;
+}
+
+/* Link styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: revert-layer;
+      border-radius: 10px;
+      text-align: center;
+
+
+    }
+
+    th,td {
+      background-color: #ffffff;
+    }
+
+    /* style to show padding */
+    #thirdtable table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 5px;
+    }
+
+
+
+    tr:nth-child(even) {
+      background-color: #D6EEEE}
+    
+  </style>
+</head>
+
+<body>
+
+  <table style="width:80%">
+    <caption>Table1</caption>
+
+    <tr>
+      <th colspan="2">Firstname and Lastname</th>
+
+      <th>Age</th>
+    </tr>
+
+
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+
+
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+    </tr>
+
+
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>80</td>
+    </tr>
+  </table>
+
+
+
+
+
+
+  <table>
+
+    <caption>Table2</caption>
+
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Points</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+  </table>
+
+  <!-- HTML Table Headers         -->
+
+
+  <!-- basic model of schedual 
+ table header on the top        -->
+  <table>
+    <caption>Table3</caption>
+
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Age</th>
+    </tr>
+
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+    </tr>
+
+
+
+
+  </table>
+
+
+  <!-- table headers is on the left side of the table -->
+
+
+  <table border-collapse="unset">
+    <caption>Table4</caption>
+
+    <tr>
+      <th>Firstname</th>
+      <td>Jill</td>
+
+
+      <td>Eve</td>
+
+    </tr>
+
+    <tr>
+      <th>Lastname</th>
+      <td>Smith</td>
+      <td>Jackson</td>
+
+    </tr>
+    <tr>
+      <th>Age</th>
+      <td>94</td>
+      <td>50</td>
+    </tr>
+
+
+
+
+  </table>
+
+
+
+
+  <!-- Table for padding-->
+
+
+  <h2>Cellpadding</h2>
+  <p>Cell padding specifies the space between the cell content and its borders.</p>
+
+  <table id="thirdtable" style="width:100%">
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Age</th>
+    </tr>
+    <tr>
+      <td>Jill</td>
+      <td>Smith</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Eve</td>
+      <td>Jackson</td>
+      <td>94</td>
+    </tr>
+    <tr>
+      <td>John</td>
+      <td>Doe</td>
+      <td>80</td>
+    </tr>
+  </table>
+
+  <p><strong>Tip:</strong> Try to change the padding to 5px.</p>
+
+
+
+</body>
+
+</html>
