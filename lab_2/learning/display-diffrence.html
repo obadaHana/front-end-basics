@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Alignment Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .container {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 20px;
+            border: 2px solid black;
+            display: flex; /* Enables flexbox */
+            background-color: lightgray;
+        }
+
+        .box {
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 1️⃣ Justify Content (Centers Horizontally) */
+        .justify-center {
+            justify-content: center; /* Moves items to the center horizontally */
+        }
+
+        /* 2️⃣ Align Items (Centers Vertically) */
+        .align-center {
+            align-items: center; /* Moves items to the center vertically */
+        }
+
+        /* 3️⃣ Both Justify & Align (Perfect Center) */
+        .both-center {
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* 4️⃣ Text Align (Centers Only Inline Text) */
+        .text-container {
+            text-align: center; /* Centers text */
+            padding: 10px;
+            border: 2px solid black;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>1️⃣ justify-content: center (Centers Horizontally)</h2>
+    <div class="container justify-center">
+        <div class="box">Box</div>
+    </div>
+
+    <h2>2️⃣ align-items: center (Centers Vertically)</h2>
+    <div class="container align-center">
+        <div class="box">Box</div>
+    </div>
+
+    <h2>3️⃣ Both justify & align (Centers Horizontally & Vertically)</h2>
+    <div class="container both-center">
+        <div class="box">Box</div>
+    </div>
+
+    <h2>4️⃣ text-align: center (Centers Only Text, Not Box)</h2>
+    <div class="text-container">
+        <p>This text is centered inside a div.</p>
+    </div>
+
+</body>
+</html>

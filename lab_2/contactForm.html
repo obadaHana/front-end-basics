@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContactUs</title>
+    <link rel="stylesheet" href="./assets/contacForm.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li> <a href="main.html">Home</a></li>
+            <li> <a href="./about.html">About</a></li>
+            <li> <a href="./posts.html">Posts</a></li>
+            <li> <a href="./contactForm.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    <div class="contact-container">
+        <form action="" id="Register">
+
+            <h1>Contact Us</h1>
+       
+
+
+            <input type="text" name="fullName" id="fullName" placeholder="Full Name" class="contact-inputs" required>
+            <span id="nameError"></span>
+        
+           
+            <input type="email" name="email" id="email" placeholder="Email" class="contact-inputs" required>
+            <span id="emailError"></span>
+
+            <textarea name="message" id="message"  placeholder="Send us a message" class="contact-inputs" required></textarea>
+            <span id="messageError" ></span>
+
+
+            <button type="submit"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <title>Submit</title>
+                <desc>A paper plane icon representing the submit action</desc>
+                <path d="M22 2L11 13" />
+                <path d="M22 2L15 22 11 13 2 9 22 2Z" />
+              </svg>
+            </button>
+        </form>
+    </div>
+
+</body>
+<footer>
+    <section class="footer-bottom">
+        <p>&copy; 2022 Sumac.</p>
+    </section>
+</footer>
+</html>

@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Form</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Exercise_5</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 <body>
-    <div class="form-container">
-        <form id="contactForm">
-            <label>Full Name:</label>
-            <input type="text" id="fullName">
+    <div class="container">
+        <form action="" id="Register">
+            <label for="fullName">Full Name</label>
+            <input type="text" name="fullName" id="fullName">
             <span id="nameError"></span>
 
-            <label>Email:</label>
-            <input type="email" id="email">
-            <span id="emailError"></span>
-
-            <label>Age:</label>
-            <input type="number" id="age">
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age">
             <span id="ageError"></span>
 
-            <label>Password:</label>
-            <input type="password" id="password">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <span id="emailError"></span>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
             <span id="passwordError"></span>
 
             <button type="submit">Submit</button>
-            <p id="successMessage"></p>
         </form>
     </div>
 
-    <script src="script.js"></script>
 </body>
 </html>
