@@ -1,0 +1,266 @@
+/* Reset default margin and padding for consistency across browsers */
+body, h1, h2, h3, ul, p, img {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling for the body, setting background and font styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fefefe;
+}
+
+.modal_user {
+    position: fixed;
+    z-index: 1000; /* Ensure modal appears above other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    overflow: auto; /* Enable scrolling if content exceeds viewport */
+}
+
+/* Main content area styles */
+main {
+    padding: 20px;
+}
+
+
+
+
+/* Styling for span elements */
+span {
+    background-color: #fff;
+    border-radius: 5px;
+    font-size: larger;
+    padding: 5px;
+}
+
+/* User section styles */
+.user-section {
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.user-section h2 {
+    text-align: center;
+}
+
+/* User card hover effect */
+.user:hover {
+    transform: scale(1.02);
+}
+
+/* User title styles */
+.title {
+    margin: 5px 0;
+    margin-left: 10px;
+}
+
+/* User items list styles */
+.items {
+    list-style: none;
+}
+
+#posts_title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    
+}
+
+
+/* Adjust the width of each post */
+.post {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgb(235, 232, 228);
+    border-radius: 10px;
+    /* width: 90%; Set the width to 90% */
+    box-sizing: border-box; /* Include padding and border in the width */
+    /* margin-left: 100px;
+    margin-right: 100px; */
+    justify-content: center;
+    justify-items: center;
+}
+
+.post-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+
+/* Adjust the layout of the post header */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+/* Adjust the width of each post */
+.post-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Adjust the margin of the post details */
+.user-id,
+.tags,
+.reactions,
+.post-id {
+    margin-bottom: 5px;
+}
+
+
+/* Set the container to flex and wrap */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute posts evenly */
+    width: 40%;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+
+/* Style for the user image */
+#profile-pic {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    margin-right: 10px; /* Add margin to separate from the username */
+}
+
+/* User image styles */
+img {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+
+/* CSS for loading indicator */
+#loadingIndicator {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: none; 
+}
+
+/* Additional styles for comments */
+.comment-element {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f2f2f2; 
+}
+
+.comment-header {
+    display: flex;
+    align-items: center;
+}
+
+.comment-username {
+    margin-right: 10px;
+}
+
+span {
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: larger;
+    padding: 5px;
+    font-weight: bold;
+}
+
+/* Modal container */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 1000; /* Ensure modal appears above other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    overflow: auto; /* Enable scrolling if content exceeds viewport */
+}
+/* Modal container */
+.modal {
+    display: none; /* Hide modal by default */
+    position: fixed;
+    z-index: 1000; /* Ensure modal appears above other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    overflow: auto; /* Enable scrolling if content exceeds viewport */
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Center modal vertically and horizontally */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px; /* Limit max width of modal */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    position: relative;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Hover effect for username */
+.post-username:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    color: black;
+}
+
+.user-profile-link {
+    color: black; /* Set the default color to black */
+}
