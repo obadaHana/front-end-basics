@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 2 - Profiles</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+    <nav>
+        <ul class="w3-bar w3-black">
+            <li><a href="main.html" class="w3-bar-item w3-button w3-mobile">Home</a></li>
+            <li><a href="./posts.html" class="w3-bar-item w3-button w3-mobile">Posts</a></li>
+            <li><a href="./profiles.html" class="w3-bar-item w3-button w3-mobile">Profiles</a></li>
+            <li><a href="./about.html" class="w3-bar-item w3-button w3-mobile">About</a></li>
+            <li><a href="./contactForm.html" class="w3-bar-item w3-button w3-mobile">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="profiles">
+            <!-- Profiles will be loaded here -->
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer-bottom">
+            <p>© 2022 Sumac.</p>
+        </section>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const profilesContainer = document.getElementById("profiles");
+
+            const fetchData = async (url) => {
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error("Failed to fetch data");
+                    return await response.json();
+                } catch (error) {
+                    console.error(error);
+                    return null;
+                }
+            };
+
+            const users = await fetchData("https://dummyjson.com/users");
+            if (!users) {
+                profilesContainer.innerHTML = "<p>Error loading profiles.</p>";
+                return;
+            }
+
+            users.users.forEach(user => {
+                const userElement = document.createElement("div");
+                userElement.classList.add("profile");
+                userElement.innerHTML = `
+                    <h3>${user.username}</h3>
+                    <p><strong>Email:</strong> ${user.email}</p>
+                    <p><strong>Phone:</strong> ${user.phone}</p>
+                `;
+                profilesContainer.appendChild(userElement);
+            });
+        });
+    </script>
+</body>
+</html>
