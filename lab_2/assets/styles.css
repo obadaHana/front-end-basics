@@ -1,3 +1,4 @@
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,38 +7,99 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 main {
-    flex: 1 0 auto;
+    flex: 1 0 auto; /* Ensures footer stays at bottom */
 }
 
-/* Navigation styling */
+/* Simplified Navigation styling */
 nav {
-    background-color: #c1a80b;
-    color: rgb(125, 78, 67);
+    background-color: #c1a80b; /* Gold */
+    color: #000000; /* Black text for better contrast */
     padding: 10px;
 }
 
-.w3-bar {
+nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
 }
 
-.w3-bar-item {
-    width: 100%;
+nav li {
+    width: 100%; /* Stacked on mobile */
     text-align: center;
 }
 
-.w3-bar-item a {
-    color: white;
+nav a {
+    color: #ffffff; /* White text for better contrast */
     text-decoration: none;
     display: block;
     padding: 10px;
+}
+
+nav a.active {
+    background-color: #a38c09; /* Darker gold for active link */
+    color: #ffffff; /* White text for better contrast */
+}
+
+/* Posts styling */
+#posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers children (.post) horizontally */
+    width: 100%;
+}
+
+.post {
+    background-color: #ffffff; /* White background for better contrast */
+    border: 1px solid #000000; /* Black border for better contrast */
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px auto;
+    max-width: 600px;
+    box-shadow: 0 0 5px #000000; /* Black shadow for better contrast */
+}
+
+.post h2 {
+    font-size: 1.5rem;
+    color: #000000; /* Black text for better contrast */
+    margin: 0 0 10px;
+}
+
+.post p {
+    margin: 5px 0;
+    color: #000000; /* Black text for better contrast */
+}
+
+.comments {
+    margin-top: 10px;
+}
+
+.comments ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.comments li {
+    background-color: #ffffff; /* White background for better contrast */
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 3px;
+    border: 1px solid #000000; /* Black border for better contrast */
 }
 
 /* Contact Form styling */
@@ -45,27 +107,44 @@ nav {
     display: flex;
     justify-content: center;
     padding: 20px;
+    min-height: calc(100vh - 140px); /* Adjust for nav and footer */
 }
 
 .contact-container h1 {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 2rem; /* ~32px, scales better than x-large */
+    font-size: 2rem;
     text-align: center;
-    color: #333; /* Matches post headings */
+    color: #000000; /* Black text for better contrast */
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #c1a80b; /* Matches nav */
+    background-color: #c1a80b;
     border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #000000; /* Black border for better contrast */
+    border-radius: 25px;
+    background-color: #ffffff; /* White background for better contrast */
+    box-shadow: 0 0 10px #000000; /* Black shadow for better contrast */
+    width: 100%;
+    max-width: 400px;
 }
 
 .contact-inputs {
     display: block;
     width: 100%;
-    max-width: 400px;
-    margin: 10px auto;
     padding: 8px;
-    border: 1px solid #ddd;
+    border: 1px solid #000000; /* Black border for better contrast */
     border-radius: 5px;
+}
+
+.contact-inputs:focus {
+    background-color: #f5f5f5; /* Light background for better contrast */
+    outline: none;
 }
 
 button {
@@ -73,28 +152,81 @@ button {
     margin: 20px auto;
     padding: 10px 20px;
     background-color: #c1a80b;
-    color: white;
+    color: #ffffff; /* White text for better contrast */
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #a38c09; /* Slightly darker on hover */
+button:disabled {
+    background-color: #ccc; /* Gray for disabled state */
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #a38c09; /* Darker gold on hover, only if not disabled */
+}
+
+span {
+    color: red;
+    font-size: small;
+    text-align: center;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #ffffff; /* White background for better contrast */
+    color: #000000; /* Black text for better contrast */
+    padding: 20px;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close-btn {
+    color: #000000; /* Black text for better contrast */
+}
+
+/* Home page styling */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for better contrast */
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000000; /* Black shadow for better contrast */
 }
 
 /* Footer styling */
 .footer-bottom {
-    background-color: #333;
-    color: white;
+    background-color: #333333; /* Dark background for better contrast */
+    color: #ffffff; /* White text for better contrast */
     text-align: center;
     padding: 10px;
     width: 100%;
 }
-/* Responsive adjustments for larger screens */
+
+/* Responsive adjustments */
 @media (min-width: 601px) {
-    .w3-bar-item {
-        width: auto; /* Side-by-side layout */
-        text-align: left; /* Left-aligned for desktop */
+    nav li {
+        width: auto; /* Side-by-side on desktop */
+        text-align: left;
+    }
+
+    .post {
+        margin: 10px;
     }
 }

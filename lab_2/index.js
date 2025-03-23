@@ -1,42 +1,59 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById("Register").addEventListener("submit", function(event) {
-        event.preventDefault();
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contactForm');
+    const button = form.querySelector('button');
 
-        let fullName = document.getElementById("fullName").value.trim();
-        let email = document.getElementById("email").value.trim();
-        let confirm = document.getElementById("confirm").checked;
+    const setActiveNavLink = () => {
+        const currentPage = window.location.pathname.split('/').pop();
+        const links = document.querySelectorAll("nav ul li a");
 
-        let nameError = document.getElementById("nameError");
-        let emailError = document.getElementById("emailError");
-        let messageError = document.getElementById("messageError");
+        links.forEach(link => {
+            const href = link.getAttribute("href");
+            link.classList.toggle("active", href === currentPage);
+        });
+    };
 
-        nameError.innerText = "";
-        emailError.innerText = "";
-        messageError.innerText = "";
+    setActiveNavLink();
 
+    if (!form || !button) {
+        console.error("Form or button not found!");
+        return;
+    }
+
+    form.addEventListener('input', () => {
+        const confirm = document.getElementById('confirm').checked;
+        button.disabled = !confirm;
+    });
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const fullName = document.getElementById('fullName').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const nameError = document.getElementById('nameError');
+        const emailError = document.getElementById('emailError');
+
+        nameError.innerText = '';
+        emailError.innerText = '';
         let isValid = true;
 
-        // Name: No integers, only letters and spaces
-        if (fullName === "" || !/^[a-zA-Z\s]+$/.test(fullName)) {
-            nameError.innerText = "Please enter a valid full name (letters only)";
+        if (!fullName || !/^[a-zA-Z\s]+$/.test(fullName)) {
+            nameError.innerText = 'Use letters only';
             isValid = false;
         }
-
-        // Email: Must contain @ and .
-        if (email === "" || !email.includes("@") || !email.includes(".")) {
-            emailError.innerText = "Please enter a valid email (e.g., user@domain.com)";
-            isValid = false;
-        }
-
-        // Checkbox: Must be checked
-        if (!confirm) {
-            messageError.innerText = "Please confirm to send";
+        if (!email || !email.includes('@') || !email.includes('.')) {
+            emailError.innerText = 'Add @ and .';
             isValid = false;
         }
 
         if (isValid) {
-            alert("Form submitted successfully!");
-            // Uncomment to actually submit: this.submit();
+            alert('Sent!');
+            form.reset();
+            button.disabled = true;
         }
     });
+
+
+
+
+
+
 });

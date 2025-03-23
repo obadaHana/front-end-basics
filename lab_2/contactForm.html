@@ -3,48 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ContactUs</title>
+    <title>Sumac - Contact</title>
     <link rel="stylesheet" href="./assets/styles.css">
-    <script src="index.js"></script>
 </head>
 <body>
-    <nav>
-        <ul class="w3-bar w3-black">
-            <li><a href="main.html" class="w3-bar-item w3-button w3-mobile">Home</a></li>
-            <li><a href="./posts.html" class="w3-bar-item w3-button w3-mobile">Posts</a></li>
-            <li><a href="./profiles.html" class="w3-bar-item w3-button w3-mobile">Profiles</a></li>
-            <li><a href="./about.html" class="w3-bar-item w3-button w3-mobile">About</a></li>
-            <li><a href="./contactForm.html" class="w3-bar-item w3-button w3-mobile">Contact</a></li>
-        </ul>
-    </nav>
-
+    <header>
+        <nav>
+            <ul class="w3-bar w3-black">
+                <li><a href="main.html" class="w3-bar-item w3-button w3-mobile">Home</a></li>
+                <li><a href="posts.html" class="w3-bar-item w3-button w3-mobile">Posts</a></li>
+                <li><a href="contactForm.html" class="w3-bar-item w3-button w3-mobile">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <div class="contact-container">
-            <form action="" id="Register">
+            <form id="contactForm">
                 <h1>Contact Us</h1>
-                <input type="text" name="fullName" id="fullName" placeholder="Full Name" class="contact-inputs" required>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" class="contact-inputs" required>
                 <span id="nameError"></span>
-                <input type="email" name="email" id="email" placeholder="Email" class="contact-inputs" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="contact-inputs" required>
                 <span id="emailError"></span>
-                <textarea name="message" id="message" placeholder="Send us a message" class="contact-inputs" required></textarea>
-                <span id="messageError"></span>
-                <label for="confirm"><input type="checkbox" id="confirm" name="confirm" required> Confirm to send</label>
-                <button type="submit"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <title>Submit</title>
-                        <desc>A paper plane icon representing the submit action</desc>
-                        <path d="M22 2L11 13" />
-                        <path d="M22 2L15 22 11 13 2 9 22 2Z" />
-                    </svg>
-                </button>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" class="contact-inputs" required></textarea>
+                <label>
+                    <input type="checkbox" id="confirm"> Confirm
+                </label>
+                <button type="submit" disabled>Send</button>
             </form>
         </div>
     </main>
-
     <footer>
         <section class="footer-bottom">
-            <p>© 2022 Sumac.</p>
+            <h2>Footer</h2>
+            <p>© 2025 Sumac.</p>
         </section>
     </footer>
+    <script src="./index.js"></script>
 </body>
 </html>
